@@ -1,9 +1,9 @@
 decorator==4.0.6
 dj-database-url==0.3.0
 dj-static==0.0.6
-Django==1.8.4
+Django==1.9
 django-postgrespool==0.3.0
-django-tastypie==0.12.2
+-e git+https://github.com/django-tastypie/django-tastypie@f0d07abd12432df7c77f9527f5d3d211e7a68797#egg=django_tastypie-master
 django-toolbelt==0.0.1
 gunicorn==19.3.0
 ipython==4.0.1

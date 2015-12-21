@@ -22,9 +22,8 @@
 
 from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns(
-    '',
-
+urlpatterns = [
     # Supermodule configuration
     url('', include('ponies.urls')),
-)
+]
+

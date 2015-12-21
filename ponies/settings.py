@@ -95,6 +95,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'ponies.context_processors.settings'
             ],
+            'builtins': ['pyjade.ext.django.templatetags'],
             'loaders': [
                 ('pyjade.ext.django.Loader', (
                     'django.template.loaders.filesystem.Loader',

@@ -1,6 +1,6 @@
 # Ponies
 
-Sample Django application
+Sample Django application. Makes use of [pyjade](https://github.com/syrusakbary/pyjade), [tastypie](https://github.com/django-tastypie/django-tastypie) and [whitenoise](https://github.com/evansd/whitenoise).
 
 # How to configure your environment
 
@@ -18,10 +18,11 @@ Sample Django application
 - (Archlinux) See https://wiki.archlinux.org/index.php/PostgreSQL
 - $`sudo passwd postgres`
 - $`su - postgres`
-- postgres$`initdb --locale en_US.UTF-8 -E UTF8 -D '/var/lib/postgres/data'`
+- postgres$`initdb --locale en_US.UTF-8 -E UTF8 -D '/var/lib/postgres/data'` (unnecessary on some systems)
 - $`sudo systemctl start postgresql.service`
 - postgres$`createuser -d -r django`
 - postgres$`createdb -U django ponies`
+- If you get an error on the last step, you might have to change security settings in '/var/lib/postgres/data/pg_hba.conf' to allow local access to your db. Check the postgresql documentation.
 
 Then get back to your virtual env and run the migrations:
 

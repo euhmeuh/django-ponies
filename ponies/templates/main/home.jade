@@ -1,0 +1,30 @@
+- extends "_base.html"
+- load staticfiles
+
+block head
+  link(rel='stylesheet', href='{{ STATIC_URL }}main/css/home.css')
+
+block title
+  |Home
+
+block content
+  h1 Ponies
+  p Welcome to the ponies project!
+  h1 List of ponies
+  table
+    thead
+      th Name
+      th Description
+      th Faction
+    tbody
+      if ponies
+        for pony in ponies
+          tr
+            td {{ pony.name }}
+            td {{ pony.short_desc }}
+            td {{ pony.faction|default:"-" }}
+      else
+        tr
+          td(colspan=3) There is nopony.
+
+block footer
